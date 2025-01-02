@@ -1,0 +1,53 @@
+/* EPLTable.css */
+.table-container {
+    margin-top: 400px !important;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #a29bfe;
+    /* Light purple title */
+}
+
+.epl-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.epl-table th,
+.epl-table td {
+    border: 1px solid #ffffff;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.epl-table th {
+    background-color: #6c5ce7;
+    /* Purple header */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.epl-table tr:nth-child(even) {
+    background-color: #1c1c1c;
+    /* Darker black for even rows */
+}
+
+.epl-table tr:nth-child(odd) {
+    background-color: #000000;
+    /* Regular black for odd rows */
+}
+
+.epl-table tr:hover {
+    background-color: #341f97;
+    /* Highlight row on hover (darker purple) */
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "../components-css/MainSource.css"; // Optional: Import a CSS file for styling
+import EPLTable from "../components/EPLTable.js";
 
 const MainSource = () => {
   return (
@@ -15,6 +16,7 @@ const MainSource = () => {
           <div className="menu-bar-contact">Contact</div>
         </div>
       </div>
+      <EPLTable/>
     </div>
   );
 };
