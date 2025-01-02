@@ -1,4 +1,22 @@
-.main-section>h3 {
+.main-title {
     font-size: 30px;
-    color: rgb(58, 2, 84);
+    color: rgb(106, 39, 137);
+    margin-left: 20px;
+}
+
+.main-section {
+    background-color: rgb(32, 32, 32);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    background-color: rgb(46, 49, 49);
+    height: 80px;
+    width: 100%;
 }
