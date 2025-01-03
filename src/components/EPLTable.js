@@ -4,15 +4,13 @@ import "../components-css/EPLTable.css";
 
 const EPLTable = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
       const { data: tableData, error } = await supabase
-        .from("eplTable18-19") // Replace with your exact table name
-        .select("Position, Club, Points") // Updated column names
-        .order("Position", { ascending: true }); // Updated sort column
+        .from("eplTable18-19")
+        .select("Position, Club, Points")
+        .order("Position", { ascending: true });
 
       if (error) {
         console.error("Error fetching data:", error);
@@ -20,15 +18,10 @@ const EPLTable = () => {
         console.log("Fetched data:", tableData);
         setData(tableData);
       }
-      setLoading(false);
     };
 
     fetchData();
   }, []);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
 
   return (
     <div className="table-container">
