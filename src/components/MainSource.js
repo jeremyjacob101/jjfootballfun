@@ -1,5 +1,5 @@
 import React from "react";
-import "../components-css/MainSource.css"; // Optional: Import a CSS file for styling
+import "../components-css/MainSource.css";
 import EPLTable from "../components/EPLTable.js";
 
 const MainSource = () => {
@@ -12,11 +12,12 @@ const MainSource = () => {
         <div className="menu-bar-items">
           <div className="menu-bar-home">Home</div>
           <div className="menu-bar-about">About</div>
-          <div className="menu-bar-epltable">EPL Table</div>
           <div className="menu-bar-contact">Contact</div>
+          <div className="menu-bar-epltable">EPL Table</div>
+          <div className="menu-bar-epltable">DataViz</div>
         </div>
       </div>
-      <EPLTable/>
+      <EPLTable />
     </div>
   );
 };

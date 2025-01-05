@@ -38,9 +38,9 @@ const EPLTable = () => {
           <tbody>
             {data.map((team, index) => (
               <tr key={index}>
-                <td>{team.Position}</td> {/* Updated column name */}
-                <td>{team.Club}</td> {/* Updated column name */}
-                <td>{team.Points}</td> {/* Updated column name */}
+                <td>{team.Position}</td> 
+                <td>{team.Club}</td>
+                <td>{team.Points}</td>
               </tr>
             ))}
           </tbody>
