@@ -46,3 +46,33 @@
     font-weight: 500;
     color: rgb(168, 161, 161);
 }
+
+.menu-bar-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu-bar-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-item {
+    color: #ffffff;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #575757;
+}
