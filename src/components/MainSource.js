@@ -24,11 +24,14 @@ const MainSource = () => {
             <div className="menu-bar-home">
               <Link to="/">Home</Link>
             </div>
-            <div className="menu-bar-about">
+            {/* <div className="menu-bar-about">
               <Link to="/about">About</Link>
             </div>
             <div className="menu-bar-contact">
               <Link to="/contact">Contact</Link>
+            </div> */}
+            <div className="menu-bar-dataviz">
+              <Link to="/dataviz">DataViz</Link>
             </div>
             <div className="menu-bar-dropdown">
               <div className="menu-bar-epltable">EPL Table</div>
@@ -51,6 +54,7 @@ const MainSource = () => {
           <Route path="/" element={<h2>Welcome to JJ Football!</h2>} />
           <Route path="/about" element={<h2>About JJ Football</h2>} />
           <Route path="/contact" element={<h2>Contact Us</h2>} />
+          <Route path="/dataviz" element={<h2>Data Visualization</h2>} />
           {seasons.map((season) => (
             <Route
               key={season.value}

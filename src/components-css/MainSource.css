@@ -22,6 +22,11 @@
     flex-direction: column;
 }
 
+.menu-bar-items>div>a {
+    color: rgb(168, 161, 161);
+    text-decoration: none;
+}
+
 .main-header {
     position: fixed;
     top: 0;
