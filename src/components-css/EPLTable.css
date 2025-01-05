@@ -1,6 +1,5 @@
-/* EPLTable.css */
 .table-container {
-    margin-top: 400px !important;
+    margin-top: 150px !important;
     width: 80%;
     margin: 2rem auto;
     background-color: #000000;
@@ -15,7 +14,6 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
     color: #a29bfe;
-    /* Light purple title */
 }
 
 .epl-table {
@@ -32,22 +30,18 @@
 
 .epl-table th {
     background-color: #6c5ce7;
-    /* Purple header */
     color: #ffffff;
     font-weight: bold;
 }
 
 .epl-table tr:nth-child(even) {
     background-color: #1c1c1c;
-    /* Darker black for even rows */
 }
 
 .epl-table tr:nth-child(odd) {
     background-color: #000000;
-    /* Regular black for odd rows */
 }
 
 .epl-table tr:hover {
     background-color: #341f97;
-    /* Highlight row on hover (darker purple) */
 }
