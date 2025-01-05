@@ -4,10 +4,12 @@ import "../components-css/EPLTable.css";
 
 const EPLTable = ({ season }) => {
   const [data, setData] = useState([]);
-  const tableName = `eplTable${season}`; // Dynamically set the table name based on season
+  const [isLoading, setIsLoading] = useState(true);
+  const tableName = `eplTable${season}`;
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true);
       const { data: tableData, error } = await supabase
         .from(tableName)
         .select("Position, Club, Points")
@@ -15,19 +17,21 @@ const EPLTable = ({ season }) => {
 
       if (error) {
         console.error("Error fetching data:", error);
+        setData([]);
       } else {
         console.log(`Fetched data for ${season}:`, tableData);
-        setData(tableData);
+        setData(tableData || []);
       }
+      setIsLoading(false);
     };
 
     fetchData();
-  }, [season, tableName]); // Refetch data when season changes
+  }, [season, tableName]);
 
   return (
     <div className="table-container">
       <h1 className="table-title">Premier League {season} Standings</h1>
-      {data.length > 0 ? (
+      {isLoading ? null : data.length > 0 ? (
         <table className="epl-table">
           <thead>
             <tr>
@@ -46,9 +50,8 @@ const EPLTable = ({ season }) => {
             ))}
           </tbody>
         </table>
-      ) : (
-        <p>No data to display for {season}</p>
-      )}
+      ) : null
+      }
     </div>
   );
 };

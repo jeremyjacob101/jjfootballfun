@@ -52,7 +52,7 @@
     display: inline-block;
 }
 
-.dropdown-content {
+.seasons-dropdown-content {
     display: none;
     position: absolute;
     background-color: #333;
@@ -61,11 +61,11 @@
     z-index: 1;
 }
 
-.menu-bar-dropdown:hover .dropdown-content {
+.menu-bar-dropdown:hover .seasons-dropdown-content {
     display: block;
 }
 
-.dropdown-item {
+.seasons-dropdown-item {
     color: #ffffff;
     padding: 8px 16px;
     text-decoration: none;
@@ -73,6 +73,6 @@
     cursor: pointer;
 }
 
-.dropdown-item:hover {
+.seasons-dropdown-item:hover {
     background-color: #575757;
 }
